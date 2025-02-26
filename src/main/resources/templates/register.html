@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Register - Goldencat Bank</title>
+    <title>Register - EVERGREEN BANK</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #000000, #ffd700);
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
             color: #ffffff;
             margin: 0;
             padding: 0;
@@ -18,39 +18,26 @@
         }
 
         .navbar-custom {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(255, 255, 255, 0.1);
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
+            backdrop-filter: blur(10px);
         }
 
         .navbar-custom a {
             color: #ffffff !important;
-        }
-
-        .navbar-custom .navbar-brand {
             font-weight: bold;
-        }
-
-        .navbar-custom .social-icons a {
-            color: #ffffff;
-            margin-left: 15px;
-            font-size: 1.2rem;
-            transition: color 0.3s ease;
-        }
-
-        .navbar-custom .social-icons a:hover {
-            color: #ffd700;
         }
 
         .container {
             max-width: 450px;
             padding: 30px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            position: relative;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
@@ -60,41 +47,47 @@
         }
 
         .form-group label {
-            color: #dddddd;
+            color: #ffffff;
             text-align: left;
             display: block;
         }
 
         .form-group input {
-            border: 1px solid #ffd700;
-            background-color: #333;
+            border: 1px solid #ffffff;
+            background-color: rgba(255, 255, 255, 0.2);
             color: #ffffff;
+            border-radius: 5px;
+        }
+
+        .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
         }
 
         .btn {
-            background-color: #ffd700;
+            background-color: #f39c12;
             border: none;
-            color: black;
-            transition: background-color 0.3s ease;
+            color: white;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         .btn:hover {
-            background-color: #ffc700;
+            background-color: #e67e22;
+            transform: scale(1.05);
         }
 
         .custom-link {
-            color: #ffd700;
+            color: #f39c12;
             text-decoration: none;
             font-weight: bold;
         }
 
         .custom-link:hover {
-            color: #ffecb3;
+            color: #e67e22;
             text-decoration: underline;
         }
 
         .footer {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(255, 255, 255, 0.1);
             color: white;
             padding: 15px 0;
             font-size: 14px;
@@ -102,29 +95,13 @@
             bottom: 0;
             width: 100%;
             text-align: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-
-        @keyframes shake {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            50% { transform: translateX(5px); }
-            75% { transform: translateX(-5px); }
-            100% { transform: translateX(0); }
+            backdrop-filter: blur(10px);
         }
     </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-custom">
-    <a class="navbar-brand" href="#">Goldencat Bank</a>
-    <div class="ml-auto social-icons">
-        <a href="https://www.youtube.com" target="_blank" title="YouTube">
-            <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-        </a>
-    </div>
+    <a class="navbar-brand" href="#">EVERGREEN BANK</a>
 </nav>
 
 <div class="container">
@@ -132,11 +109,11 @@
     <form method="post" action="/register">
         <div class="form-group">
             <label>Username:</label>
-            <input type="text" class="form-control" name="username" required />
+            <input type="text" class="form-control" name="username" required placeholder="Enter your username"/>
         </div>
         <div class="form-group">
             <label>Password:</label>
-            <input type="password" class="form-control" name="password" required />
+            <input type="password" class="form-control" name="password" required placeholder="Enter your password"/>
         </div>
         <button type="submit" class="btn btn-block">Register</button>
     </form>
