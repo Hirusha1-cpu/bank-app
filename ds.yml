@@ -20,7 +20,7 @@ spec:
         name: mysql
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: "Test@123"
+          value: "1234"
         - name: MYSQL_DATABASE
           value: "bankappdb"
         ports:
@@ -55,7 +55,7 @@ spec:
     spec:
       containers:
       - name: bankapp
-        image: adijaiswal/bankapp:latest
+        image: hirudoc5/bankapp:latest
         ports:
         - containerPort: 8080
         env:
@@ -64,7 +64,7 @@ spec:
         - name: SPRING_DATASOURCE_USERNAME
           value: root
         - name: SPRING_DATASOURCE_PASSWORD
-          value: Test@123
+          value: 1234
 ---
 # Bank Application Service
 apiVersion: v1
