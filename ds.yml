@@ -55,6 +55,7 @@ spec:
       containers:
       - name: bankapp
         image: hirudoc5/bankapp:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         env:
