@@ -1,4 +1,3 @@
----
 # MySQL Deployment
 apiVersion: apps/v1
 kind: Deployment
@@ -20,7 +19,7 @@ spec:
         name: mysql
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: "1234"
+          value: "1234"  # Wrapped in quotes
         - name: MYSQL_DATABASE
           value: "bankappdb"
         ports:
@@ -64,7 +63,7 @@ spec:
         - name: SPRING_DATASOURCE_USERNAME
           value: "root"
         - name: SPRING_DATASOURCE_PASSWORD
-          value: "1234"
+          value: "1234"  # Wrapped in quotes
 ---
 # Bank Application Service
 apiVersion: v1
